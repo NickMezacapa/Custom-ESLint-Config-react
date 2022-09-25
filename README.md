@@ -1,7 +1,7 @@
 # Custom ESLint config for `create-react-app` 🛑
 
 🔧 Rules are automatically fixable using the `--fix` [flag](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix) on the command line.
-
+<br />
 🤝 Configurable for `.js` `.jsx` `.ts` `.tsx` files
 
 ### 🔍 This configuration will ensure the following:
@@ -15,4 +15,3 @@
   - Enforced sorting for multiline props
   - React reserved props must be listed before all other props, but still respect alphabetical order
   - Props order is also case sensitive
-
