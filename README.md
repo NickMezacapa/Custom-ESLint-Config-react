@@ -1,2 +1,2 @@
-## Custom ESLint config for create-react-app
+## Custom ESLint config for create-react-app 🛑
 
