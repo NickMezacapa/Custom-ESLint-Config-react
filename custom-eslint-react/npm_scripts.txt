@@ -1,0 +1,66 @@
+NPM SCRIPTS
+----------------------------------------------------
+----------------------------------------------------
+
+Add the following to "scripts" in package.json:
+
+"scripts": {
+    "lint": "eslint -c .eslintrc.js --ext .js,.jsx .",
+    "lint:fix": "npm run lint -- --fix"
+}
+
+----------------------------------------------------
+
+Running the scripts:
+
+1.  The following command will run the linter for the project and 
+    report if there are any issues.
+
+    `npm run lint`
+
+
+2.  The following command will autofix any issues that can be 
+    autofixed.
+
+    `npm run lint:fix`
+
+----------------------------------------------------
+----------------------------------------------------
+
+Opitonal Steps:
+
+    - I like to make sure that any code violating ESLint config 
+      doesn't get pushed to the codebase. Need to enforce running
+      ESLint before a Git commit. This is accomplished using 
+      'husky' and 'lint-staged' packages.
+
+    - Husky can be used to run scripts before certain Git Hooks are
+      executed. 
+
+    - Lint Staged runs linters against staged git files
+
+
+1. Install Husky
+    - We can use a one time command to quickly initialze a project
+      with Husky and Lint Staged.
+
+        `npx husky-init && npm install`
+            or
+        'npx husky-init && yarn`
+
+2. Install lint-staged
+    `npm install --save-dev lint-staged`
+
+3. Create a lint-staged configuration file
+    `touch lint-staged.config.js`
+
+4. If you use lint-staged, add the following script to package.json
+
+    - Without this, husky will complain about lint-staged 
+      command being missing. I guess you can use npx to run 
+      lint staged, but this method is cleaner IMO
+
+    "lint-staged": "lint-staged"
+
+5. Add a pre-commit hook
+    ` npx husky add .husky/pre-commit "npm run lint:staged" `
