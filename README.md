@@ -1,4 +1,4 @@
-# Custom ESLint config for create-react-app 🛑
+# Custom ESLint config for `create-react-app` 🛑
 
 🔧 Rules are automatically fixable using the `--fix` [flag](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix) on the command line.
 
