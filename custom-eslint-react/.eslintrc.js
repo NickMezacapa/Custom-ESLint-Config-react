@@ -11,7 +11,7 @@ module.exports = {
 		jest: true, // Jest global variables like `it` etc.
 		node: true, // Defines things like process.env when generating through node
 	},
-	extends: ["react-app", "react-app/jest"],
+	extends: [],
 	parser: "babel-eslint", // Uses babel-eslint transforms.
 	parserOptions: {
 		ecmaFeatures: {
